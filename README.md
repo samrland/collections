@@ -27,7 +27,7 @@ how we'd like pull requests formatted.
 We have a very specific naming format for pull requests.
 It should be `action-language-filename-#`.
 
-- `action` is the action you are comitting. It can be `add` or `change`.
+- `action` is the action you are comitting. It can be `add`, `change`, or `comment` (`comment` *only* applies if you *only* modify comments. code changes will not be accepted in `comment` PRs.).
 - `language` is the name of the language you are comitting to. It should be the same as the folder name. So, `cpp`, not `c++`. This part can also be `docs` if you are comitting to something like the README.
 - `filename` is the name of the file you will be comitting. (See the filename convention section below.) You only need this section if you are comitting to only 1 file.
 - `#` is just a number to differentiate different pull requests which might have the same name. The first pull request of its name does not need this section, then the next ones will be `2`, `3`, so on.
