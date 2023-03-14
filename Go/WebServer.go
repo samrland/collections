@@ -11,7 +11,7 @@ import (
 func greet(w http.ResponseWriter, r *http.Request) {
 	// This will output the text "Hello, World!" and the current time, as well as a link to /another.
 	fmt.Fprintf(w, "Hello, World! %s", time.Now())
-	fmt.Fprintf(w, "<a href='/another'>Another Page</a>")
+	fmt.Fprintf(w, "\n<a href='/another'>Another Page</a>")
 }
 
 func secondPage(w http.ResponseWriter, r *http.Request) {
@@ -21,6 +21,8 @@ func secondPage(w http.ResponseWriter, r *http.Request) {
 
 // This function starts the web server.
 func main() {
+	fmt.Println("Serving at port 8080, hit ^C to exit")
+
 	// If the user goes to /, return the value of greet().
 	http.HandleFunc("/", greet)
 	// If the user goes to /another, return the value of secondPage().
