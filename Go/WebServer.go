@@ -10,13 +10,14 @@ import (
 
 func greet(w http.ResponseWriter, r *http.Request) {
 	// This will output the text "Hello, World!" and the current time, as well as a link to /another.
-	fmt.Fprintf(w, "Hello, World! %s", time.Now())
-	fmt.Fprintf(w, "\n<a href='/another'>Another Page</a>")
+	fmt.Fprintf(w, "<p>Hello, World! The current time is: %s</p>"+
+		"<a href='/another'>View Second Page</a>",
+		time.Now())
 }
 
 func secondPage(w http.ResponseWriter, r *http.Request) {
 	// This is a second page for users to go to.
-	fmt.Fprintf(w, "This is another page!")
+	fmt.Fprintf(w, "<p>This is another page! <a href='/'>Go back</a></p>")
 }
 
 // This function starts the web server.
