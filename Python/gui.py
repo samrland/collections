@@ -8,7 +8,7 @@ print("Program is starting...")
 root = tk.Tk()
 
 # Text Labels
-empty    = tk.Label(root, text=" ") # the passing in of `root` signifies which window you want the text label to be a part of (in this case, root)
+empty    = tk.Label(root, text=" ") # the passing in of `root` signifies what you want the parent of text label to be (in this case, root)
 myLabel1 = tk.Label(root, text="Hello, World!")
 myLabel2 = tk.Label(root, text="This is some text.")
 myLabel3 = tk.Label(root, text="This is some text with a\nnew line.")
@@ -20,7 +20,7 @@ myLabel5 = tk.Label(root, text="This is some text on the second column.")
 
 def myClick1():
     myClickLabel1 = tk.Label(root, text="You clicked a button!")
-    myClickLabel1.grid(row=5, column=0) # grid is used to place widgets in a grid-like format. You get to select which row and column you want to place the widget in.
+    myClickLabel1.grid(row=5, column=0) # grid is used to place widgets in a, well, grid-like format. You get to select which row and column you want to place the widget in.
 
 def myClick2():
     myLabel6 = tk.Label(root, text="Enter your name")
@@ -39,6 +39,8 @@ myButton2 = tk.Button(root, text="You can't click me", state=tk.DISABLED) # `sta
 myButton3 = tk.Button(root, text="Click me for entry!", command=myClick2)
 
 # Placement
+# You don't have to do the placement at the end of the program. In fact, you can run .grid() right where you declare the widget.
+# It just looks cleaner, and makes it easier to find where everything is placed for easier changes.
 myLabel1.grid(row=0, column=0)
 myLabel2.grid(row=1, column=0)
 myLabel3.grid(row=2 , column=0)
