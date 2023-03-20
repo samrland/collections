@@ -15,7 +15,7 @@ but this project is easier to maintain and still holds the same
 purpose.
 
 This repository started as the miniprograms
-which used to be hosted in [samrpf/samrpf](https://github.com/samrpf/samrpf).
+which used to be hosted in [samrland/samrland](https://github.com/samrland/samrland).
 
 ## Contributing
 
