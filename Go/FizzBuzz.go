@@ -40,5 +40,5 @@ func fizzbuzzTo(int n) {
 func main() {
   var n int
   fmt.Scanln("Type a number to FizzBuzz up to: %d", &n)
-  fizzbuzzto(n)
+  fizzbuzzTo(n)
 }
